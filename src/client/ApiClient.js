@@ -1,6 +1,5 @@
 import axios from "axios";
 
-// creating the axios instance
 const ApiClient = axios.create({
     baseURL: "http://localhost:8080/api",
     headers: {        
@@ -9,12 +8,10 @@ const ApiClient = axios.create({
     },
 })
 
-// retrive the auth token from localstorage
 function getAuthToken() {
     return localStorage.getItem("token");
 }
 
-// a request interceptor to include the auth token in every request
 ApiClient.interceptors.request.use(config => {
     const token = getAuthToken();
     if (token) {

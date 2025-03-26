@@ -8,7 +8,7 @@ import { Link, useNavigate } from "react-router-dom";
 const RegisterPage = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [backendErrors, setBackendErrors] = useState(null);
-  const [successMessage, setSuccessMessage] = useState(null); // Added success message state
+  const [successMessage, setSuccessMessage] = useState(null); 
   const navigate = useNavigate();
 
   const initialValues = {
@@ -34,7 +34,7 @@ const RegisterPage = () => {
       );
 
       if (response.status === 200) {
-        setSuccessMessage("Registration successful!"); // Show success message
+        setSuccessMessage("Registration successful!"); 
         setTimeout(() => {
           setSuccessMessage(null);
           navigate("/login");
@@ -81,7 +81,7 @@ const RegisterPage = () => {
       <div className="register-container">
         <h1 className="register-title">EShop - Register</h1>
         {backendErrors && backendErrors.general && <div className="error-message-backend">{backendErrors.general}</div>}
-        {successMessage && <div className="success-message">{successMessage}</div>} {/* Display success message */}
+        {successMessage && <div className="success-message">{successMessage}</div>} 
         <form onSubmit={formik.handleSubmit} className="register-form">
           <div className="form-group">
             <label htmlFor="firstName">First Name</label>

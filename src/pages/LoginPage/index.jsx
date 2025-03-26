@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import { Formik, Form, ErrorMessage, Field } from "formik";
 import * as Yup from "yup";
-import { useNavigate, Link } from "react-router-dom"; // Import Link
+import { useNavigate, Link } from "react-router-dom";
 import "./LoginPage.css";
 
 const LoginPage = () => {
@@ -113,7 +113,7 @@ const LoginPage = () => {
           )}
         </Formik>
         <p className="signup-link">
-          New User? <Link to="/register">Click Here</Link> {/* Changed <a> to Link */}
+          New User? <Link to="/register">Click Here</Link> 
         </p>
       </div>
     </div>

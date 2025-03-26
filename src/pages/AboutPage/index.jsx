@@ -1,12 +1,12 @@
 import React from 'react';
 import Navbar from "../../components/Navbar";
-import About from "../../components/About"; // Import the About component
+import About from "../../components/About";
 
 const AboutPage = () => {
     return (
         <>
             <Navbar />
-            <About /> {/* Render the About component */}
+            <About />
         </>
     );
 };
